@@ -1,0 +1,32 @@
+<div class="product-container">
+  <div class="product-details">
+    
+    <img
+      [src]="product.photo"
+      alt="{{ product.productTitle }}"
+      class="product-image"
+    />
+    
+    <div class="product-info">
+      <h2>{{ product.productTitle }}</h2>
+      <p class="condition">
+        Product condition is <span>{{ product.productCondition }}</span>
+      </p>
+      <div class="price">
+        <p class="actual-price">₹{{product.price}}</p>
+        <p class="sell-price">₹{{product.sellPrice}}</p>
+      </div>
+      <p class="description">{{product.description}}</p>
+      <p class="reason">Reason - {{product.reason}}</p>
+      <div class="nego">
+        @if(product.negotiable == "Yes"){<p>Product Price will be negotiable</p>}
+        @else{ <p>Product price will not be negotiable</p>}      
+      </div>
+      <p class="quantity">Only {{product.quantity}} is available</p>
+
+      <button (click)="handleAddToCart()" class="edit-btn">Add To Cart</button>
+      <button routerLink='/seller-dashboard' class="back">Go Back</button>
+    </div>
+    
+</div>
+</div>

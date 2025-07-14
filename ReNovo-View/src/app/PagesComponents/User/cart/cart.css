@@ -1,0 +1,86 @@
+.cart-container {
+  @apply w-[90%] rounded-xl bg-gray-200 shadow-md m-auto mt-16 p-5;
+
+  .bottom-section {
+    @apply p-0 flex justify-between;
+
+    .checkout {
+      @apply bg-blue-700 text-white p-2 rounded-md;
+    }
+    .totalPrice {
+      @apply bg-green-700 text-white p-2;
+    }
+  }
+
+  .section-1 {
+    @apply p-0;
+    .delete {
+      @apply bg-red-600 rounded-xl font-semibold text-white inline p-2 mb-2 cursor-pointer;
+    }
+
+    .noProducts{
+      @apply p-2 flex justify-center flex-col items-center;
+    }
+    .noProducts p{
+      @apply text-[25px]
+    }
+    .noProducts button{
+      @apply bg-green-900 p-2 text-white font-semibold mt-5 rounded-lg text-[18px];
+    }
+
+    .products {
+      @apply flex gap-10 bg-white mb-4 p-5 shadow-lg rounded-lg;
+
+      .left-img {
+        @apply w-[100px];
+
+        img {
+          @apply w-full;
+        }
+      }
+      .right-data {
+        @apply p-0;
+
+        .title {
+          @apply font-bold text-[18px];
+        }
+
+        .description {
+          @apply italic text-gray-600 py-1;
+        }
+
+        .price {
+          @apply flex gap-3 font-semibold;
+
+          .Aprice {
+            @apply text-gray-500 line-through italic;
+          }
+
+          .sellprice {
+            @apply text-green-800;
+          }
+        }
+
+        .quantity {
+          @apply flex gap-5 mt-5;
+
+          .btns {
+            @apply flex gap-4;
+
+            .btn {
+              @apply bg-gray-200 rounded-lg text-[20px] w-[30px] h-[30px] flex justify-center align-middle items-center cursor-pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-2{
+    @apply mt-20;
+
+    .heading{
+      @apply font-semibold text-[25px];
+    }
+  }
+}

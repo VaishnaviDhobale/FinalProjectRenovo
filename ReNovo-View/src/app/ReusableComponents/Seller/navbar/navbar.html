@@ -1,0 +1,21 @@
+<nav class="navbar text-white">
+  <div class="logo" routerLink="">
+    <span>Re</span>Novo
+     <!-- <img class="logoImg" ="../../../../public/assets/logo.png" alt="logo"> -->
+  </div>
+  <div class="routes">
+      <a routerLink="">Home</a>
+      <a routerLink="/seller-dashboard">Dashboard</a>
+    @if(token){
+      <p (click)="clickedProfile()" class="logout">{{navName}}</p>
+    }@else{
+      <a routerLink="/signin">Login</a>
+    }
+  </div>
+  @if(clickedOnProfile){
+    <div class="profile">
+      <p>Good to see you <span>{{name}}🖤</span></p>
+      <button (click)="handleLogout()" class="logout-btn">Logout</button>
+    </div>
+  }
+</nav>

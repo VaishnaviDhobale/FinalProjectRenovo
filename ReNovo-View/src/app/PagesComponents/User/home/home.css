@@ -1,0 +1,49 @@
+.container {
+  @apply w-full;
+
+  .banner {
+    @apply text-white text-center py-[165px] px-5 flex flex-col gap-2.5 justify-center items-center;
+    background: url("../../../../../public/assets/banner.jpg")
+      no-repeat center center/cover;
+
+    h1 {
+      @apply text-[50px] mt-24 font-bold;
+
+      span {
+        @apply text-[#ed6916];
+      }
+    }
+
+    i {
+      @apply text-[20px];
+    }
+
+    p {
+      @apply mt-2;
+    }
+
+    .btn {
+      @apply bg-[#f3e9e9] text-black py-3 px-6 rounded-full cursor-pointer font-semibold text-base w-[200px] mt-8 transition duration-300;
+
+      &:hover {
+        @apply bg-[#f1d6d6];
+      }
+    }
+  }
+}
+
+/* slider desing  */
+.carousel {
+  width: 90%;
+  margin: auto;
+}
+
+.topProducts {
+  margin-top: 50px;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+}
+

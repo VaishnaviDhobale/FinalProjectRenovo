@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="sidebar">
+    <app-user-sidebar></app-user-sidebar>
+  </div>
+
+  <div class="products">
+      @for (p of products; track p!.id) {
+        <app-product [product]="p"></app-product>
+      }
+  </div>
+</div>

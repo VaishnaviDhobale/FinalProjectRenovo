@@ -1,0 +1,35 @@
+.signin-container {
+  @apply bg-gray-100 
+         w-full sm:w-full md:w-[60%] lg:w-[40%] 
+         m-auto mt-20 text-center p-10 rounded-lg;
+
+  .signin-heading {
+    @apply text-[30px] mb-5 font-semibold;
+  }
+
+  input {
+    @apply outline-none p-2 w-full mb-6;
+  }
+  .msg {
+    @apply text-left text-red-500 font-semibold text-[12px];
+  }
+
+  .signin-btn {
+    @apply bg-[var(--btn-color)] text-white cursor-pointer py-2 w-full rounded font-bold text-[18px];
+  }
+
+  .signin-btn:hover {
+    @apply bg-[var(--btn-hover)];
+  }
+
+  .signup {
+    @apply text-blue-700 font-bold;
+
+    .or{
+      @apply text-black p-2 font-normal
+    }
+  }
+   .signin-p{
+    @apply text-left mt-2;
+  }
+}

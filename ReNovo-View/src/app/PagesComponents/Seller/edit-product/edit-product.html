@@ -1,0 +1,79 @@
+<div class="add-product-container">
+  <form action="" (ngSubmit)="handleEdit()" #productForm="ngForm">
+    <h2 class="form-heading">Edit Product</h2>
+    <input
+      type="text"
+      placeholder="Product Title"
+      name="productTitle"
+      [(ngModel)]="product.productTitle"
+      required
+    />
+    <select name="category" id="category">
+      <option value="" disabled selected>Select Category</option>
+      <!-- <option *ngFor="let category of categories" [value]="category">{{ category }}</option> -->
+    </select>
+    <select
+      name="productCondition"
+      id="productCondition"
+      [(ngModel)]="product.productCondition"
+      required
+    >
+      <option value="">Select Condition</option>
+      <option value="New">New</option>
+      <option value="Good">Good</option>
+      <option value="Fair">Fair</option>
+      <option value="Poor">Poor</option>
+    </select>
+    <input
+      type="number"
+      placeholder="Price"
+      name="price"
+      [(ngModel)]="product.price"
+      required
+    />
+    <input
+      type="number"
+      placeholder="Sell Price"
+      name="sellPrice"
+      [(ngModel)]="product.sellPrice"
+      required
+    />
+    <select
+      name="negotiable"
+      id="negotiable"
+      [(ngModel)]="product.negotiable"
+      required
+    >
+      <option value="" disabled selected>Negotiable</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+    <input
+      type="number"
+      placeholder="Quantity"
+      name="quantity"
+      [(ngModel)]="product.quantity"
+      required
+    />
+    <textarea
+      placeholder="Description"
+      name="description"
+      [(ngModel)]="product.description"
+      required
+    ></textarea>
+    <textarea
+      placeholder="Reason for Selling"
+      name="reason"
+      [(ngModel)]="product.reason"
+      required
+    ></textarea>
+    <input
+      type="url"
+      placeholder="Photo URL"
+      name="photo"
+      [(ngModel)]="product.photo"
+      required
+    />
+    <button class="form-submit-btn" type="submit">Edit Product</button>
+  </form>
+</div>

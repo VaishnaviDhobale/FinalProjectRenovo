@@ -1,0 +1,27 @@
+.sidebar-container {
+  @apply p-5;
+
+  .btns {
+    @apply flex gap-7 justify-center items-center text-sm mt-4;
+
+    .show-products-btn {
+      @apply bg-[#121274] text-white font-semibold p-2 mt-10 rounded-lg;
+    }
+
+    .add-product-btn {
+      @apply bg-green-900 text-white font-semibold p-2 mt-10 rounded-lg;
+    }
+  }
+
+  .filters{
+    @apply p-0;
+    
+    .filter{
+      @apply p-3 w-full mt-5 flex justify-start items-start
+    }
+
+    .filter select{
+      @apply w-full p-2 border border-gray-300 rounded-lg outline-none;
+    }
+  }
+}

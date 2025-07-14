@@ -1,0 +1,35 @@
+<div class="signin-container">
+  <h1 class="signin-heading">Welcome Back!</h1>
+  <form action="" #sellerForm="ngForm" (ngSubmit)="loginSeller()">
+    <!-- username  -->
+    @if(!email){
+    <p class="msg">*Required</p>
+    }
+    <input
+      [(ngModel)]="email"
+      name="email"
+      type="text"
+      placeholder="Enter Email"
+      required
+    /><br />
+
+    <!-- password  -->
+    @if(!password){
+    <p class="msg">*Required</p>
+    }
+    <input
+      [(ngModel)]="password"
+      name="password"
+      type="password"
+      placeholder="Enter Password"
+      required=""
+    /><br />
+
+    <!-- submit btn  -->
+    <button class="signin-btn" type="submit">Login</button>
+  </form>
+  <p class="signin-p">
+    New here?
+ <a class="signup" routerLink="/seller-signup"> Signup</a>
+  </p>
+</div>

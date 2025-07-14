@@ -1,0 +1,31 @@
+<div class="sidebar-container">
+  <div class="btns">
+    @if(!showAddForm){
+      <button (click)="showAddProduct()" class="add-product-btn">
+      Add Product
+    </button>
+    }
+    @if(!showProduct){
+    <button (click)="showProducts()" class="show-products-btn">
+      Show Products
+    </button>
+    }
+  </div>
+
+  @if(showProduct){
+  <div class="filters">
+    <div class="filter">
+      <select
+        id="category"
+        [(ngModel)]="selectedCategory"
+        (change)="handleFilter()"
+      >
+        <option value="">All Categories</option>
+        @for (category of categories; track category) {
+        <option [value]="category">{{ category }}</option>
+        }
+      </select>
+    </div>
+  </div>
+  }
+</div>

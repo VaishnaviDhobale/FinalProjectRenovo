@@ -1,0 +1,32 @@
+.signup-container {
+  @apply bg-gray-100 
+         w-full sm:w-full md:w-[60%] lg:w-[40%] 
+         m-auto mt-10 mb-9 text-center p-10 rounded-lg;
+
+  .signup-heading {
+    @apply text-[30px] mb-5 font-semibold;
+  }
+
+  input,select {
+    @apply outline-none p-2 w-full mb-6;
+  }
+  .msg {
+    @apply text-left text-red-500 font-semibold mb-1 text-[12px];
+  }
+
+  .signup-btn {
+    @apply bg-[var(--btn-color)] text-white cursor-pointer py-2 w-full rounded font-bold text-[18px];
+  }
+
+  .signup-btn:hover {
+    @apply bg-[var(--btn-hover)];
+  }
+
+  .signin-span {
+    @apply text-blue-700 font-bold;
+  }
+
+  .signup-p{
+    @apply text-left mt-2;
+  }
+}

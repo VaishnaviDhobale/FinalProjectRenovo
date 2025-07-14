@@ -1,0 +1,22 @@
+<div class="dashboard-container">
+  <div class="sidebar">
+    <app-sidebar
+      (addProductClicked)="handleAddProduct()"
+      (showProductsClicked)="handleShowProducts()"
+       [products]="products"
+       [showProduct]="showProducts"
+       [showAddForm]="showAddForm"
+       (filteredProductsChanged)="onFilterChanged($event)"
+    ></app-sidebar>
+  </div>
+
+  <div class="dashboardView">
+    @if (!showAddForm && !showProducts) {
+    <app-welcome></app-welcome>
+    } @if (showAddForm) {
+    <app-add-product></app-add-product>
+    } @if (showProducts) {
+       <app-products [isLoading]="isLoading" [products]="filteredProducts"></app-products>
+    }
+  </div>
+</div>

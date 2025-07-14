@@ -1,0 +1,18 @@
+.container {
+  @apply flex gap-56;
+
+  .sidebar {
+    @apply w-[300px] pt-20 pl-2 fixed top-0 left-0 h-screen bg-gray-100 shadow-xl overflow-y-auto z-10;
+  }
+
+  .products {
+    @apply ml-[300px] h-screen overflow-y-scroll flex-1 py-5 px-6 bg-white grid grid-cols-3 gap-10;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* for hide scrollbar  */
+  .dashboardView::-webkit-scrollbar {
+    display: none;
+  }
+}

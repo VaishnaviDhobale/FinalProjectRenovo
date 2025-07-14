@@ -1,0 +1,33 @@
+<div class="container">
+  <img [src]="product.photo" alt="{{ product.productTitle }}" class="img" />
+  <div class="info">
+    <h3 class="title">{{ product.productTitle }}</h3>
+
+    <div class="subInfo">
+      <div class="price">
+        <p class="originalPrice">₹{{ product.price }}</p>
+        <p class="sellPrice">₹{{ product.sellPrice }}</p>
+      </div>
+      <p class="condition">{{ product.productCondition }} Condition</p>
+    </div>
+  </div>
+ @if(role=='seller'){
+   <button
+    class="buy"
+    [routerLink]="['/seller-single-page', product.id]"
+    (click)="handleClick()"
+  >
+    View Product
+  </button>
+ }
+
+ @if(role=="visitor"){
+   <button
+    class="buy"
+    [routerLink]="['/user-single-page', product.id]"
+    (click)="handleClick()"
+  >
+    View Product
+  </button>
+ }
+</div>

@@ -1,0 +1,10 @@
+.welcome-container h1{
+    @apply text-[30px] font-semibold text-center mt-[200px];
+}
+.welcome-container{
+    @apply flex flex-col justify-center text-center
+}
+
+.welcome-container p{
+    @apply text-[21px] text-gray-500 italic; 
+}

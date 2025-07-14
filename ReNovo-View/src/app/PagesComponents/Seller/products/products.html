@@ -1,0 +1,28 @@
+<div class="container">
+  <!-- 🔍 Search box -->
+  <input
+    id="search"
+    type="search"
+    [(ngModel)]="searchTerm"
+    placeholder="Search products by id, title, or description"
+    class="search-input"
+  />
+
+  <!-- 🔄 Loading indicator -->
+  @if (isLoading) {
+    <div class="loading">Loading products...</div>
+  }
+
+  <!-- 🛍️ Product list -->
+  @if (!isLoading) {
+    <div class="product-list">
+      @for (p of filteredProducts; track p.id) {
+        <app-product [product]="p"></app-product>
+      }
+
+      @if (filteredProducts.length === 0) {
+        <div class="no-products">No products found.</div>
+      }
+    </div>
+  }
+</div>

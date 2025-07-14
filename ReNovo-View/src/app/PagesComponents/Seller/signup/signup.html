@@ -1,0 +1,35 @@
+<div class="signup-container">
+  <h1 class="signup-heading">Welcome Seller!</h1>
+  <form action="" (ngSubmit)="handleSignup()">
+    @if(!name){<p class="msg">*Required</p>}
+    <input [(ngModel)]="name" type="text" name="name" placeholder="Enter Name" /><br />
+
+    @if(!email){<p class="msg">*Required</p>}
+    <input [(ngModel)]="email" type="email" name="email" placeholder="Enter Email" /><br />
+
+    @if(!password){<p class="msg">{{msg}}</p>}
+    <input [(ngModel)]="password" type="passowrd" name="password" placeholder="Enter Password" /><br />
+
+    @if(!confirmPassword){<p class="msg">*Required</p>}
+    <input [(ngModel)]="confirmPassword" type="passowrd" name="confirm-password" placeholder="Enter Confirm Password" /><br />
+
+    @if(!contact){<p class="msg">*Required</p>}
+    <input [(ngModel)]="contact" type="text" name="contact" placeholder="Enter Mobile Number" /><br />
+
+    @if(!address){<p class="msg">*Required</p>}
+    <input [(ngModel)]="address" type="text" name="address" placeholder="Enter Address" />
+
+    @if(!role){<p class="msg">*Required</p>}
+    <select [(ngModel)]="role" name="role" id="role">
+      <option value="">Select Role</option>
+      <option value="visitor">Visitor</option>
+      <option value="seller">Seller</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <button class="signup-btn" type="submit">Sign Up</button>
+  </form>
+  <p class="signup-p">
+    Already have an account? <span class="signin-span"><a routerLink="/signin">Sign In</a></span>
+  </p>
+</div>

@@ -1,0 +1,55 @@
+<div class="cart-container">
+  <div class="section-1">
+    @if(products.length==0){
+    <div class="noProducts">
+      <p>No Products in the trolly</p>
+      <button routerLink="/products">Add Products</button>
+    </div>
+    }@else { @for(p of products; track p.id){
+    <p class="delete" (click)="handleDelete(p.id)">Remove</p>
+    <div class="products">
+      <div class="left-img">
+        <img src="{{ p.product.photo }}" alt="{{ p.productTitle }}" />
+      </div>
+      <div class="right-data">
+        <h2 class="title">{{ p.product.productTitle }}</h2>
+        <p class="description">{{ p.product.description }}</p>
+        <div class="price">
+          <p class="Aprice">₹{{ p.product.price }}</p>
+          <p class="sellprice">₹{{ p.product.sellPrice }} × {{p.quantity}} = {{p.totalPrice}}</p>
+        </div>
+        <div class="quantity">
+          <p>Quantity</p>
+          <div class="btns">
+            <p class="minus btn">-</p>
+            <p>{{ p.quantity }}</p>
+            <p (click)="handleIncrement(p)" class="plus btn">+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    } }
+  </div>
+  @if(products.length!==0){
+  <div class="bottom-section">
+    <p class="totalPrice">Total Amount:- {{ totalPrice }}</p>
+    @if(!proceedToCheckout){
+      <button class="checkout" (click)="handleCheckout()">Processed to Checkout</button>
+    }@else {
+      <button class="checkout" (click)="handleCheckout()">Close checkout section</button>
+    }
+  </div>
+  }
+
+  @if(proceedToCheckout){
+    <div class="section-2">
+      <div class="userDetails">
+        <h2 class="heading">Shipping Information</h2>
+        <p class="name">{{userData.name}}</p>
+      </div>
+      <div class="paymentDetails">
+
+      </div>
+    </div>
+  }
+</div>

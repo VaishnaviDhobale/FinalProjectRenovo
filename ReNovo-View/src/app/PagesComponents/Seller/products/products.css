@@ -1,0 +1,7 @@
+
+#search{
+    @apply w-full p-2 border border-gray-300 rounded-lg mb-4 outline-none;
+}
+.product-list{
+    @apply grid grid-cols-3 gap-x-5;
+}

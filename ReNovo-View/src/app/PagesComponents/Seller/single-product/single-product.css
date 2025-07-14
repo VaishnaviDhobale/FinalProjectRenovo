@@ -1,0 +1,54 @@
+.product-container {
+  @apply p-4 border w-[90%] h-[auto] rounded-lg shadow-lg m-auto mt-10 relative;
+
+  .product-details {
+    @apply flex flex-row h-[100%] gap-8;
+
+    .product-image {
+      @apply w-[40%] h-[100%] object-cover rounded-lg mb-4;
+    }
+
+    .product-info {
+      @apply p-0 relative;
+
+
+
+      h2 {
+        @apply text-3xl font-bold mb-2;
+      }
+      .condition span {
+        @apply text-green-600 font-semibold italic text-xl underline;
+      }
+
+      .price {
+        @apply flex gap-5 mt-2 text-gray-500;
+
+        .actual-price {
+          @apply line-through italic text-gray-500;
+        }
+      }
+
+      .description {
+        @apply mt-2;
+      }
+      .reason {
+        @apply text-green-600 mt-2 italic;
+      }
+      .nego {
+        @apply mt-2;
+      }
+      .quantity {
+        @apply mt-2 text-blue-900 font-semibold text-[18px];
+      }
+      .edit-btn {
+        @apply mt-4 bg-[var(--btn-color)] text-white px-4 py-2 rounded-lg hover:bg-[var(--btn-hover)] transition-colors duration-300;
+      }
+      .back{
+        @apply mt-4 bg-gray-500 text-black px-4 py-2 rounded-lg hover:bg-gray-400 transition-colors duration-300 ml-2;
+      }
+    }
+  }
+  .delete{
+    @apply absolute top-2 right-2 bg-red-700 w-[30px] h-[30px] p-1 rounded-full flex justify-center items-center cursor-pointer hover:bg-red-600 transition-colors duration-300 text-white text-3xl align-middle pb-2;        
+  }
+}

@@ -1,0 +1,7 @@
+@if(role!=="seller"){
+    <app-navbar-user></app-navbar-user>
+}@else{
+    <app-navbar-seller></app-navbar-seller>
+}
+
+<router-outlet></router-outlet>

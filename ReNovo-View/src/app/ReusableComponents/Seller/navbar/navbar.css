@@ -1,0 +1,37 @@
+.navbar {
+  @apply flex justify-between items-center py-2 px-0 bg-[#1a1d24] sticky top-0 z-20;
+
+  .logo {
+    @apply pl-5 text-[25px] font-bold cursor-pointer flex items-center;
+
+    span {
+      @apply text-[#ff6300];
+    }
+  }
+
+  .routes {
+    @apply pr-5 flex items-center gap-5 text-[16px];
+
+    a {
+      @apply no-underline cursor-pointer flex items-center;
+    }
+
+    .logout {
+      @apply cursor-pointer bg-green-700 w-[40px] h-[40px] flex items-center justify-center text-center rounded-full text-[20px];
+    }
+  }
+
+  .profile{
+    @apply flex flex-col font-semibold bg-white text-black p-2 rounded-bl-2xl rounded-tl-2xl rounded-br-2xl absolute right-2 top-16;
+
+    p{
+      @apply text-[18px]
+    }
+    span{
+      @apply text-green-600; 
+    }
+    .logout-btn{
+      @apply bg-red-700 text-white px-3 py-2 mt-4 text-[17px] rounded-xl hover:bg-red-600;
+    }
+  }
+}

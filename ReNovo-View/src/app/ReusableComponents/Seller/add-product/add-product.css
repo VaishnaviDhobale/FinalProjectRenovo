@@ -1,0 +1,26 @@
+.add-product-container{
+    @apply m-auto h-screen w-[60%];
+
+    form{
+        @apply pl-10 pr-10 pt-5 pb-5 bg-[#f3f4f6] flex flex-col items-center justify-center;
+         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+              rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+        .form-heading{
+            @apply text-2xl font-bold mb-5;
+        }
+
+        input, select, textarea {
+            @apply w-full p-2 mb-3 rounded border-none outline-none;
+        }
+        .form-submit-btn{
+            @apply bg-[var(--btn-color)] text-white font-bold p-2 rounded cursor-pointer;
+        }
+        .form-submit-btn:hover{
+            @apply bg-[var(--btn-hover)];
+        }
+        #photo-lable{
+            @apply mb-2 text-gray-700 ;
+        }
+    }
+}
