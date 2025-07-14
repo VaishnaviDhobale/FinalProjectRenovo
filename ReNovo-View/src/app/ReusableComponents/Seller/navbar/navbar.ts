@@ -1,32 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { Router } from '@angular/router';
-
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-seller',
+  standalone: true,
   imports: [RouterModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css'
 })
-export class Navbar implements OnInit{
-  
+export class Navbar implements OnInit {
   name = localStorage.getItem("name");
-  navName!:any;
+  navName!: string;
   role = localStorage.getItem("role");
   token = localStorage.getItem("token");
-  clickedOnProfile!:boolean;
+  clickedOnProfile = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private cdRef: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-      this.navName= this.name?.charAt(0).toUpperCase();
+    this.navName = this.name?.charAt(0).toUpperCase() || '';
+    this.cdRef.detectChanges();  // ✅ Fix the NG0100 error
   }
 
-  clickedProfile(){
+  clickedProfile() {
     this.clickedOnProfile = !this.clickedOnProfile;
   }
-  handleLogout(){
+
+  handleLogout() {
     localStorage.clear();
     this.clickedOnProfile = false;
     this.router.navigate(['/signin']);

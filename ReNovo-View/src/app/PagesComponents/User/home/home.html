@@ -5,4 +5,13 @@
     <p>One platform, endless possibilities for buyers and sellers.</p>
     <button class="btn" routerLink="/seller-signup">Become A Seller</button>
   </div>
+  <div class="top-products">
+    <h1>Top Products</h1>
+    <div class="products">
+      @for(p of products.slice(0, 4); track p.id){
+        <app-product [product]="p"></app-product>
+    }
+    </div>
+  </div>
+  <app-footer></app-footer>
 </div>
